@@ -1,5 +1,7 @@
 import random
-print(random.randrange(1, 10))
+print(random.randrange(1, 100)*10)
+
+
 firstNum = input("Tell me first number : ")
 lastNum = input("Tell me last number : ")
 Sum = int(firstNum) + int(lastNum)
