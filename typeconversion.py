@@ -1,11 +1,13 @@
 import random
 print(random.randrange(1, 100)*10)
 
-
+# Sum of two number
 firstNum = input("Tell me first number : ")
 lastNum = input("Tell me last number : ")
 Sum = int(firstNum) + int(lastNum)
-print("Sum of digit of number is :", Sum)
+print("Sum of digit of number is 1 :", Sum)
+print("Sum of digit of number is 2 :" + str(Sum))
+
 
 # get person details
 name = input("Enter your Name : ")
