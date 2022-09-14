@@ -5,8 +5,9 @@ age = int(input('Enter your Age '))
 def valid_user_for_policy(name, age, mobile):
     print('Namaste,', name, 'You are eligible to buy policy')
     if age > 45:
+
         high_risk_policy = ['SBI Lite', 'Pnb MetLife']
-        print('Please choose any policy', high_risk_policy[0], high_risk_policy[0])
+        print('Please choose any policy', high_risk_policy[0], high_risk_policy[1])
     else:
         print('Purchase HDFC plan')
 
