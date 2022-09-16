@@ -65,15 +65,25 @@ for x in range(3, 30, 2):
     print('Number incremented by 2 ', x)
 
 # Find vowel in name
+name = input('Enter your name : ')
 vowel = ['a', 'e', 'i', 'o', 'u']
-name = input('Enter your name ')
-count = 0
-for x in name:
-    for y in vowel:
-        if x is y:
-            print('This letter is vowel : ', x)
-            count += 1
+countVowel = 0
+countConso = 0
 
-print('Total vowel in your name :', name, 'is :', count)
+for x in name.replace(" ", ""):
+    if x.lower() in ('a', 'e', 'i', 'o', 'u'):
+        countVowel += 1
+        print('This letter is vowel : ', x)
+    elif x.upper in ('A', 'E', 'I', 'O', 'U'):
+        countVowel += 1
+        print('This letter is vowel : ', x)
+    else:
+        countConso += 1
+        print('This is consonant', x)
+
+
+print('String is :', name)
+print('Length of string is : ', len(name.replace(" ", "")), 'Vowel is :', countVowel, 'Consonant is :', countConso)
+
 
 
