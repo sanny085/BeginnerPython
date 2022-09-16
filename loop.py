@@ -71,10 +71,7 @@ countVowel = 0
 countConso = 0
 
 for x in name.replace(" ", ""):
-    if x.lower() in ('a', 'e', 'i', 'o', 'u'):
-        countVowel += 1
-        print('This letter is vowel : ', x)
-    elif x.upper in ('A', 'E', 'I', 'O', 'U'):
+    if x in ('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'):
         countVowel += 1
         print('This letter is vowel : ', x)
     else:
