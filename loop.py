@@ -15,12 +15,14 @@ while j < 5:
     if j == 3:
         continue
     print(j)
+
 # example 3
 table = 3
 i = 1
 while i <= 10:
     print('Table of ', table, 'X', i, ':', i*table)
     i += 1
+
 # example 4 - pattern printing
 k = 1
 while k <= 10:
@@ -61,4 +63,17 @@ for x in range(number):
 # range by 3rd parameter
 for x in range(3, 30, 2):
     print('Number incremented by 2 ', x)
+
+# Find vowel in name
+vowel = ['a', 'e', 'i', 'o', 'u']
+name = input('Enter your name ')
+count = 0
+for x in name:
+    for y in vowel:
+        if x is y:
+            print('This letter is vowel : ', x)
+            count += 1
+
+print('Total vowel in your name :', name, 'is :', count)
+
 
