@@ -71,7 +71,8 @@ countVowel = 0
 countConso = 0
 
 for x in name.replace(" ", ""):
-    if x in ('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'):
+    if x in ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']:
+        # x in ('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U')
         countVowel += 1
         print('This letter is vowel : ', x)
     else:
