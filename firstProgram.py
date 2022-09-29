@@ -26,3 +26,8 @@ age = input('what is you age')
 print('Your age is:' + age)
 isGenius = input('Is genious or  not?')
 print(isGenius)
+
+# absolute value
+num = abs(11 - 50)
+
+print(num)
