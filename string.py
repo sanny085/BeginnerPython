@@ -44,4 +44,23 @@ print(str2.format(2, 16))
 print(str2.find('t'))
 print(str2.index('t'))
 
+# Input string and change some word in the string
+
+def modifyString(string, position, newWord):
+    print('def modifyString(string, position, newWord):', string, position, newWord)
+    string = list(string)   # ['a','p','p','l','e']
+    string[position] = str(newWord)
+    string = ''.join(string)
+    return string
+
+
+string = input('Enter string :')
+position = int(input('Enter the index :'))
+newWord = input('Enter new Letter :')
+output = modifyString(string, int(position), newWord)
+print('Previous String is :', string)
+print('New String is :', output)
+
+
+
 
