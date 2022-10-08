@@ -1,6 +1,7 @@
 name = str(input('Enter your Name : '))
 age = int(input('Enter your Age : '))
 
+
 def valid_user_for_policy(name, age, mobile):
     print('Namaste,', name, 'You are eligible to buy policy')
     if age > 45:
@@ -25,8 +26,8 @@ def policyPlanDetails(user_policy):
         'company': 'LIC',
         'premium': 3000,
         'isReqMedical': True,
-       },
-       {
+    },
+        {
             'name': 'Pnb MetLife',
             'company': 'Punjab National Bank',
             'premium': 2800,

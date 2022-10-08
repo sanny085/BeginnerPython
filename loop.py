@@ -50,7 +50,7 @@ age = [78, 74, 56, 34, 12, 10, 8, 3, 2, 1]
 for x in age:
     if x > 18:
         print('Valid age is :', x)
-    elif x < 18 and x > 3:
+    elif 18 > x > 3:
         continue
     else:
         print('You are very kid', x)
