@@ -1,4 +1,4 @@
-user1 = ['Ankit', 'Raja', 'Mohan', 'Raja', 'Suresh', 'Rahul', 'Rakesh', 'Ayan' ]
+user1 = ['Ankit', 'Raja', 'Mohan', 'Raja', 'Suresh', 'Rahul', 'Rakesh', 'Ayan']
 # user1.remove('Raja')
 print(user1, len(user1))
 for x in user1:
@@ -21,7 +21,8 @@ print(rangeBefore)
 fruits = ['apple', 'mango', 'banana', 'apple', 'mango', 'apple']
 filterFruitName = [y.upper() for y in fruits if y != 'apple']
 print(filterFruitName)
+print('Total Number of apple is : ', fruits.count('apple'))
 
 
 branch = ['suzuki', 'maruti', 'suzuMami']
-print(branch.find('suzuki'))
+print(branch.index('suzuki'))

@@ -1,7 +1,7 @@
 x = 10
-print(16 > x > 5)
-print(not x < 12)
-print(3 != 34)
+print(16 > x > 5)  # True
+print(not x < 12)  # False
+print(3 != 34)  # True
 
 age = int(input('Enter your age '));
 print('Your age is ', age)

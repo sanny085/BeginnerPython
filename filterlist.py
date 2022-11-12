@@ -27,3 +27,8 @@ for x in range(len(value)):
 
 
 print('Final Sorted value :', value)
+
+unshortedData = [12, 23, 45, 11, 90, 110, 12, 11, 90]
+filterData = []
+short = [x for x in unshortedData if x not in filterData]
+print('Shorted Array : ', short)

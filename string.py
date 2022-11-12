@@ -41,6 +41,7 @@ if 'masic' not in allGame:
 str2 = 'Namaste python {} , Here total is {} cow'
 print(str2[3:8])  # Slicing string
 print(str2.format(2, 16))
+
 print(str2.find('t'))
 print(str2.index('t'))
 
@@ -61,6 +62,16 @@ output = modifyString(string, int(position), newWord)
 print('Previous String is :', string)
 print('New String is :', output)
 
+
+# SLice negative value
+name = "Sanny Kumar"
+print(name[1:6])
+print(name[-5:-1])
+
+# Address modifier
+name = 'Sanny'
+age = 23
+print('My name is %s, and age is %d' %(name, age))
 
 
 

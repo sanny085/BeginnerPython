@@ -8,7 +8,7 @@ def findStringCount(string, sub_string):
     while i < len(string):
         index = string[i:].find(sub_string)
         print(index)
-        if index > 0:
+        if index >= 0:
             count += 1
             i += index
         i += 1

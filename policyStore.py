@@ -1,3 +1,10 @@
+import policyModule as Store
+from policyModule import high_risk_policy
+from policyModule import low_risk_policy
+from policyModule import fetchPolicy
+
+print("All Store Dir: ", dir(Store))
+# Getting user information
 name = str(input('Enter your Name : '))
 age = int(input('Enter your Age : '))
 
@@ -5,38 +12,27 @@ age = int(input('Enter your Age : '))
 def valid_user_for_policy(name, age, mobile):
     print('Namaste,', name, 'You are eligible to buy policy')
     if age > 45:
-        high_risk_policy = ('SBI Lite', 'Pnb MetLife')  # Tuple
-        print('Your are eligible for these policy :', high_risk_policy)
-
-        user_policy = input('Choose your policy :')
-
-        # For plan details
-        if user_policy in high_risk_policy:
-            policyPlanDetails(user_policy)
+        # For high_risk_policy plan details (Getting from modules)
+        print('High Risk Policy : ', fetchPolicy(high_risk_policy))
+        user_policy = input('Choose your policy : ')
+        if user_policy in fetchPolicy(high_risk_policy):
+            Store.currentPlanDetails(user_policy, high_risk_policy)
         else:
             print('Invalid plan! Please Enter valid plan')
             return
     else:
-        print('Purchase HDFC plan')
+        # For high_risk_policy + low_risk_policy plan details (Getting from modules)
+        allPolicy = []
+        for policy_type in [high_risk_policy, low_risk_policy]:
+            allPolicy.extend(policy_type)
+        print('Low risk available policy 3 : ', fetchPolicy(allPolicy))
 
-
-def policyPlanDetails(user_policy):
-    hr_policy_details = [{
-        'name': 'SBI Lite',
-        'company': 'LIC',
-        'premium': 3000,
-        'isReqMedical': True,
-    },
-        {
-            'name': 'Pnb MetLife',
-            'company': 'Punjab National Bank',
-            'premium': 2800,
-            'isReqMedical': True,
-        }
-    ]
-    for i in range(len(hr_policy_details)):
-        if hr_policy_details[i]['name'] == user_policy:
-            print(hr_policy_details[i])
+        user_policy = input('Choose your policy : ')
+        if user_policy in fetchPolicy(allPolicy):
+            Store.currentPlanDetails(user_policy, allPolicy)
+        else:
+            print('Invalid plan! Please Enter valid plan')
+            return
 
 
 if age > 18:
